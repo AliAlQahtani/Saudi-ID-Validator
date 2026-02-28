@@ -6,6 +6,8 @@
 
 A full-stack application for validating Saudi National ID and Iqama numbers using a modified Luhn algorithm. The system ensures the ID is 10 digits, starts with 1 (Citizen) or 2 (Resident), and passes the required checksum validation.
 
+**Live Demo:** [https://saudi-id-validator.vercel.app/](https://saudi-id-validator.vercel.app/)
+
 ### Features
 
 - Validates Saudi National ID and Iqama numbers.
@@ -62,6 +64,8 @@ The Svelte app will be available at `http://localhost:5173`.
 ### الوصف
 
 تطبيق متكامل للتحقق من صحة أرقام الهوية الوطنية والإقامة السعودية باستخدام خوارزمية "Luhn" المعدلة. يتأكد النظام من أن الهوية تتكون من 10 أرقام، وتبدأ بـ 1 (للمواطنين) أو 2 (للمقيمين)، بالإضافة إلى التحقق من صحة الأرقام حسابياً.
+
+**نسخة حية (تجربة مباشرة):** [https://saudi-id-validator.vercel.app/](https://saudi-id-validator.vercel.app/)
 
 ### المميزات
 
