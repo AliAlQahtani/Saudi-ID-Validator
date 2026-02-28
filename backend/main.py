@@ -40,6 +40,14 @@ class IDResponse(BaseModel):
     id_number: str
     isValid: bool
 
+@app.get("/")
+def read_root():
+    return {
+        "message": "Welcome to the Saudi ID Validator API",
+        "docs": "Visit /docs for the interactive API documentation",
+        "usage": "Send a GET request to /validate/{id_number}"
+    }
+
 @app.get("/validate/{id_number}", response_model=IDResponse)
 def check_id(id_number: str):
     is_valid = validate_saudi_id(id_number)
