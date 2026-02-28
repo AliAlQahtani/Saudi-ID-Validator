@@ -1,4 +1,4 @@
-# Saudi ID Validator / نظام التحقق من الهوية الوطنية السعودية 🇸🇦
+# Saudi ID Validator 🇸🇦
 
 ## English
 
