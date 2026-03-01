@@ -1,10 +1,26 @@
 <script>
+  import { onMount } from "svelte";
+
   let idNumber = "";
   let result = null;
   let loading = false;
   let errorKey = null;
   let lang = "ar";
   let theme = "light";
+
+  onMount(() => {
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      theme = mediaQuery.matches ? "dark" : "light";
+
+      const handleChange = (e) => {
+        theme = e.matches ? "dark" : "light";
+      };
+      mediaQuery.addEventListener("change", handleChange);
+
+      return () => mediaQuery.removeEventListener("change", handleChange);
+    }
+  });
 
   const translations = {
     ar: {
@@ -198,6 +214,7 @@
     width: 100%;
     max-width: 400px;
     padding: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -262,6 +279,8 @@
   }
 
   input {
+    box-sizing: border-box;
+    width: 100%;
     padding: 15px;
     font-size: 1.1rem;
     border: 2px solid var(--border-color);
@@ -282,6 +301,8 @@
   }
 
   button:not(.icon-btn):not(.text-btn) {
+    box-sizing: border-box;
+    width: 100%;
     background-color: var(--btn-bg);
     color: var(--btn-text);
     border: none;
