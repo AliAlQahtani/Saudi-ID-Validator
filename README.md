@@ -6,7 +6,6 @@
 
 A full-stack application for validating Saudi National ID and Iqama numbers using a modified Luhn algorithm. The system ensures the ID is 10 digits, starts with 1 (Citizen) or 2 (Resident), and passes the required checksum validation.
 
-**Live Demo:** [https://saudi-id-validator.vercel.app/](https://saudi-id-validator.vercel.app/)
 
 ### Features
 
